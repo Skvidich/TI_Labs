@@ -1,0 +1,77 @@
+# Игнорирование файлов сборки и запуска
+bin/
+obj/
+[Bb]uild/
+[Dd]ebug/
+[Rr]elease/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Файлы NuGet
+packages/
+*.nupkg
+nuget.exe
+
+# Резервные и временные файлы
+*.bak
+*.tmp
+*.~*
+*.swp
+
+# Файлы проектов
+*.csproj.user
+*.vbproj.user
+*.pidb
+*.pdb
+*.cache
+*.dll
+*.exe
+
+# Файлы Visual Studio
+.vs/
+.vscode/
+_ReSharper.*/
+*.rsuser
+*.aps
+*.ncb
+*.opensdf
+*.sdf
+*.VC.db
+*.VC.VC.opendb
+
+# Файлы публикации
+pubxml
+*.pubxml
+publish/
+
+# Файлы тестирования
+TestResults/
+*.coverage
+*.lastbuildstate
+
+# Файлы зависимостей
+*.dll.config
+*.exe.config
+
+# Файлы WPF-специфичные
+*.psd1
+*.psm1
+gulpfile.js
+package-lock.json
+
+# Файлы ресурсов (при необходимости раскомментировать)
+# Resources/DesignTimeResources/
+# *.baml
+
+# Файлы Rider
+.idea/
+*.sln.iml
+
+# Файлы журналов и диагностики
+*.log
+*.tlog
+*.idb
+*.ilk
+*.meta
