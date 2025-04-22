@@ -1,0 +1,69 @@
+﻿<Window x:Class="TI3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Эль-Гамаль Шифратор" Height="600" Width="900">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Orientation="Horizontal" Grid.Row="0" Margin="0 5">
+            <Label Content="p:" Width="20"/>
+            <TextBox Name="PValue" Width="150"/>
+            <Label Content="x:" Width="20" Margin="10 0 0 0"/>
+            <TextBox Name="XValue" Width="150"/>
+            <Label Content="k:" Width="20" Margin="10 0 0 0"/>
+            <TextBox Name="KValue" Width="150"/>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" Grid.Row="1" Margin="0 5">
+            <Label Content="g:" Width="20" VerticalAlignment="Center"/>
+            <TextBox Name="GValue" Width="150" Height="30" VerticalAlignment="Center"/>
+            <Label Content="y:" Width="20" Margin="10 0 0 0" VerticalAlignment="Center"/>
+            <TextBox Name="YValue" Width="150" Height="30" IsReadOnly="True" VerticalAlignment="Center"/>
+            <Label Content="g[]:" Width="30" Margin="10 0 0 0" VerticalAlignment="Center"/>
+            <TextBox Name="GList" Width="150" Height="40" IsReadOnly="True" TextWrapping="NoWrap" VerticalAlignment="Center" ScrollViewer.HorizontalScrollBarVisibility="Visible"/>
+        </StackPanel>
+        
+        <StackPanel Orientation="Horizontal" Grid.Row="2" Margin="0 10">
+            <Button Name="SelectInputFile" Content="Выбрать входной файл" Click="SelectInputFile_Click"/>
+            <TextBox Name="InputFilePath" Width="400" Margin="10 0 0 0" IsReadOnly="True"/>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" Grid.Row="3" Margin="0 10">
+            <Button Name="SelectOutputFile" Content="Выбрать выходной файл" Click="SelectOutputFile_Click"/>
+            <TextBox Name="OutputFilePath" Width="400" Margin="10 0 0 0" IsReadOnly="True"/>
+        </StackPanel>
+
+        <Button Name="GetListButton" Content="Получить список g" Width="130" Margin="10" Click="SetList_Click" Grid.Column="1" Grid.Row="0"/>
+        <Button Name="SetYButton" Content="Вычислить значение y" Width="130" Margin="10" Click="SetY_Click" Grid.Column="1" Grid.Row="1"/>
+        <Button Name="EncryptButton" Content="🔒 Зашифровать" Width="130" Margin="10" Click="Encrypt_Click" Grid.Column="1" Grid.Row="2"/>
+        <Button Name="DecryptButton" Content="🔓 Расшифровать" Width="130" Margin="10" Click="Decrypt_Click" Grid.Column="1" Grid.Row="3"/>
+
+        <StackPanel Orientation="Vertical" Grid.Row="4" Margin="0 10" HorizontalAlignment="Center" Grid.ColumnSpan="2">
+            <StackPanel Orientation="Horizontal" Grid.Row="3" Margin="0 10">
+                <Label Content="Исходные данные" VerticalAlignment="Center"></Label>
+                <TextBox Name="InputData" Width="600" Height="150" Margin="10 10 0 0" IsReadOnly="True" ScrollViewer.VerticalScrollBarVisibility="Visible"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Grid.Row="3" Margin="0 10">
+                <Label Content="Выходные данные" VerticalAlignment="Center"></Label>
+                <TextBox Name="OutputData" Width="600"  Height="150" Margin="10 10 0 0" IsReadOnly="True" ScrollViewer.VerticalScrollBarVisibility="Visible"/>
+            </StackPanel>
+            
+            
+        </StackPanel>
+
+
+    </Grid>
+</Window>
+
